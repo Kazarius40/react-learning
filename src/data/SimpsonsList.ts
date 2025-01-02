@@ -1,6 +1,12 @@
-type IList:
+interface INameList {
+    name: string;
+    surname: string;
+    age: number;
+    info: string;
+    photo: string;
+}
 
-let simpsons = [
+let Simpsons: INameList = [
     {
         name: 'Bart',
         surname: 'Simpson',
