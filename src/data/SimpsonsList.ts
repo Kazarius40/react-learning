@@ -6,7 +6,7 @@ interface INameList {
     photo: string;
 }
 
-export simpsons: INameList[] = [
+export const simpsons: INameList[] = [
     {
         name: 'Bart',
         surname: 'Simpson',
