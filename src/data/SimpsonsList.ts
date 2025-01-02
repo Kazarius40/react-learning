@@ -6,7 +6,7 @@ interface INameList {
     photo: string;
 }
 
-let Simpsons: INameList = [
+export simpsons: INameList[] = [
     {
         name: 'Bart',
         surname: 'Simpson',
