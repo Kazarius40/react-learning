@@ -1,10 +1,4 @@
-interface INameList {
-    name: string;
-    surname: string;
-    age: number;
-    info: string;
-    photo: string;
-}
+import {INameList} from "../models/INameList.ts";
 
 export const simpsons: INameList[] = [
     {
