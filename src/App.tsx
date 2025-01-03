@@ -4,14 +4,15 @@
 // Створити компонент CharacterComponent який буде містити всю інформацію щодо окремого об'єкту масиву. Розмітка компоненту довільна. Опис персонажу передати через children. Стилізація довільна, але обов'язково підключена і мінімально зроблена (хочаб один стиль, який працює).
 // Створити компонент FamilyComponent в якому буде відбуватись ітерація по масиву simpsons.
 import {simpsons} from "./data/SimpsonsList.ts";
-
+import {INameList} from "./models/INameList.ts";
+import CharacterComponent from "./components/simpsons/SimpsonsInfo.tsx";
 import './App.css'
 
 function App() {
 
     return (
         <>
-            {simpsons.map({user} => ())}
+            {simpsons.map({user: } => <ChararachterComponent user={user} />)}
         </>
     )
 }
