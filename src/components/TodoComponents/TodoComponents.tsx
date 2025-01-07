@@ -16,8 +16,8 @@ export const TodoComponents = () => {
         <div>
             {
                 users.map((user) => (
-                    <TodoComponent key={user.id}>
-
+                    <TodoComponent key={user.id} item={user}>
+                        {user.todo}
                     </TodoComponent>
                 ))
             }
