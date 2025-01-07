@@ -1,5 +1,5 @@
 import {IToDo} from "../../models/ToDo/IToDo.ts";
-import {FC} from "react";
+import {FC, ReactNode} from "react";
 
 type IProps = {
     item: IToDo;

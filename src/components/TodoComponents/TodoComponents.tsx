@@ -7,8 +7,8 @@ export const TodoComponents = () => {
     useEffect(() => {
         fetch('https://dummyjson.com/todos')
             .then(res => res.json())
-            .then(json => {
-                setUsers(json);
+            .then(({todos}) => {
+                setUsers(todos);
             })
     }, [])
 
