@@ -8,10 +8,12 @@ export const TodoComponents = () => {
         .then(res => res.json())
         .then(json => {
             setUsers(json);
-        });
+        })
     return (
         {
-            users.map((user) => <TodoComponent/>)
+           <div>
+
+           </div>
         }
     )
 }
