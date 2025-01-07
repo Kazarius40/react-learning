@@ -4,12 +4,14 @@ import {IToDo} from "../../models/ToDo/IToDo.ts";
 
 export const TodoComponents = () => {
     const [users, setUsers] = useState<IToDo[]>([]);
-    useEffect(() => {})
-    fetch('https://dummyjson.com/todos')
-        .then(res => res.json())
-        .then(json => {
-            setUsers(json);
-        })
+    useEffect(() => {
+        fetch('https://dummyjson.com/todos')
+            .then(res => res.json())
+            .then(json => {
+                setUsers(json);
+            })
+    }, [])
+
     return (
         <div>
             {
