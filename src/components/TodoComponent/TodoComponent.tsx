@@ -8,10 +8,10 @@ type IProps = {
 export const TodoComponent: FC<IProps> = ({item, children}) => {
 
     return (
-        <div>
-            <h4>{item.userId}</h4>
-            <p>{children}</p>
-            <p>{item.completed ? 'true' : 'false'}</p>
+        <div className='border-2'>
+            <h4>UserId: {item.userId}</h4>
+            <p>ToDo: {children}</p>
+            <p>Status: {item.completed ? 'true' : 'false'}</p>
         </div>
     )
 
