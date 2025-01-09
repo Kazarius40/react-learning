@@ -1,9 +1,9 @@
-const UsersPage = () => {
+import UserComponent from "../components/user/UserComponent.tsx";
+
+export const UsersPage = () => {
     return (
         <div>
-            UsersPage
+            <UserComponent/>
         </div>
     );
 };
-
-export default UsersPage;

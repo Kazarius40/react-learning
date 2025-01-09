@@ -8,9 +8,9 @@ import {createRoot} from 'react-dom/client'
 import './index.css'
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import MainLayout from "./layouts/MainLayout.tsx";
-import UsersPage from "./pages/UsersPage.tsx";
-import PostsPage from "./pages/PostsPage.tsx";
+import {MainLayout} from "./layouts/MainLayout.tsx";
+import {UsersPage} from "./pages/UsersPage.tsx";
+import {PostsPage} from "./pages/PostsPage.tsx";
 
 
 const routes = createBrowserRouter([

@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-const Menu = () => {
+export const Menu = () => {
     return (
         <div>
             <ul>
@@ -10,5 +10,3 @@ const Menu = () => {
         </div>
     );
 };
-
-export default Menu;

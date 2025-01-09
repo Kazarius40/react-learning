@@ -1,7 +1,7 @@
-import Menu from "../components/menu/Menu.tsx";
+import {Menu} from "../components/menu/Menu.tsx";
 import {Outlet} from "react-router-dom";
 
-const MainLayout = () => {
+export const MainLayout = () => {
     return (
         <div>
             <Menu/>
@@ -9,5 +9,3 @@ const MainLayout = () => {
         </div>
     );
 };
-
-export default MainLayout;
