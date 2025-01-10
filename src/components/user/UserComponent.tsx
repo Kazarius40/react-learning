@@ -5,7 +5,7 @@ type UserTypeProps = {
     item: IUser;
 }
 
-const UserComponent: FC<UserTypeProps> = ({item}) => {
+export const UserComponent: FC<UserTypeProps> = ({item}) => {
     return (
         <div>
             {
@@ -14,5 +14,3 @@ const UserComponent: FC<UserTypeProps> = ({item}) => {
         </div>
     );
 };
-
-export default UserComponent;

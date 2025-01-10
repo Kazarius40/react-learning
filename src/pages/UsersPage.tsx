@@ -1,4 +1,4 @@
-import UserComponent from "../components/user/UserComponent.tsx";
+import {UserComponent} from "../components/user/UserComponent.tsx";
 
 export const UsersPage = () => {
     return (
