@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {IUser} from "../../models/IUser.ts";
-import UserComponent from "../user/UserComponent.tsx";
+import {UserComponent} from "../user/UserComponent.tsx";
 import {userService} from "../../services/api.services.ts";
 import {UsersResponse} from "../../models/IUsersResponse.ts";
 

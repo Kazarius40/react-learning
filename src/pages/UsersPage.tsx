@@ -1,9 +1,9 @@
-import {UserComponent} from "../components/user/UserComponent.tsx";
+import UsersComponent from "../components/users/UsersComponent.tsx";
 
 export const UsersPage = () => {
     return (
         <div>
-            <UserComponent/>
+            <UsersComponent/>
         </div>
     );
 };
