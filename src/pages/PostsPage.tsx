@@ -1,7 +1,9 @@
+import {PostsComponent} from "../components/posts/PostsComponent.tsx";
+
 export const PostsPage = () => {
     return (
         <div>
-            PostsPage
+            <PostsComponent/>
         </div>
     );
 };

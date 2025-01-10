@@ -1,24 +1,24 @@
 import {useEffect, useState} from "react";
-import {IUser} from "../../models/IUser.ts";
+import {IUser} from "../../models/users/IUser.ts";
 import {UserComponent} from "../user/UserComponent.tsx";
 import {userService} from "../../services/api.services.ts";
-import {UsersResponse} from "../../models/IUsersResponse.ts";
+import {IUsersResponse} from "../../models/users/IUsersResponse.ts";
 
-const UsersComponent = () => {
+export const UsersComponent = () => {
     
     const [users, setUsers] = useState<IUser[]>([]);
 
     useEffect(() => {
-        userService.getUsers().then(({users}: UsersResponse) => setUsers(users));
+        userService.getUsers().then(({users}: IUsersResponse) => setUsers(users));
     }, [])
     
     return (
         <div>
             {
-                users.map(user => <UserComponent key={user.id} item={user}/>)
+                users.map(user => (<UserComponent key={user.id} item={user}>
+                    {user.lastName}
+                </UserComponent>))
             }
         </div>
     );
 };
-
-export default UsersComponent;

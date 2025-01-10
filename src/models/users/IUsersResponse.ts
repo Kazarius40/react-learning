@@ -1,6 +1,6 @@
 import {IUser} from "./IUser.ts";
 
-export interface UsersResponse {
+export interface IUsersResponse {
     users: IUser[];
     total: number;
     skip: number;
