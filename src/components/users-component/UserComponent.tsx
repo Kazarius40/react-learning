@@ -7,8 +7,8 @@ type UserTypeProps = {
 
 export const UserComponent: FC<UserTypeProps> = ({item}) => {
     return (
-        <>
+        <div>
             {item.firstName}
-        </>
+        </div>
     );
 };
