@@ -1,6 +1,6 @@
 import {IProducts} from "./IProducts.ts";
 
-export interface RootDataItem {
+export interface ICarts {
   id: number;
   products: IProducts[];
   total: number;
