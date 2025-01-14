@@ -1,11 +1,11 @@
 import {CartsComponent} from "../components/carts-component/CartsComponent.tsx";
-import {Outlet} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 export const CartsPage = () => {
+    const {id} = useParams();
     return (
         <>
-            <CartsComponent/>
-            <Outlet/>
+            {id && <CartsComponent id={id}/>}
         </>
     );
 };
