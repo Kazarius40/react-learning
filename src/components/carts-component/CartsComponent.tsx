@@ -11,11 +11,11 @@ export const CartsComponent = ({id}: idProps) => {
     const [carts, setCarts] = useState<ICarts[]>([]);
 
 
-useEffect(()=> {
-    if(id){
-        cartsServices.getAllCartsOfUserById(+id).then(value => setCarts(value))
-    }
-},[id])
+    useEffect(() => {
+        if (id) {
+            cartsServices.getAllCartsOfUserById(+id).then(({carts}) => setCarts(carts))
+        }
+    }, [id])
 
     return (
         <>
