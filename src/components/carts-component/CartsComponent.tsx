@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {cartsServices} from "../../services/api.service.ts";
 import {ICarts} from "../../models/carts-models/ICarts.ts";
 import {CartComponent} from "./CartComponent.tsx";
+import {IBaseResponseModel} from "../../models/IBaseResponseModel.ts";
 
 type idProps = {
     id: string;
@@ -13,7 +14,7 @@ export const CartsComponent = ({id}: idProps) => {
 
     useEffect(() => {
         if (id) {
-            cartsServices.getAllCartsOfUserById(+id).then(({carts}) => setCarts(carts))
+            cartsServices.getAllCartsOfUserById(id).then(({carts}: IBaseResponseModel & {carts: ICarts[]}) => setCarts(carts))
         }
     }, [id])
 

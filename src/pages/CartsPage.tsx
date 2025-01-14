@@ -5,8 +5,9 @@ export const CartsPage = () => {
     const {id} = useParams();
     return (
         <>
-            {id && <CartsComponent id={id}/>}
             <Outlet/>
+            {id && <CartsComponent id={id}/>}
+
         </>
     );
 };

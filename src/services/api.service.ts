@@ -9,6 +9,6 @@ export const getAll = async <T, >(endpoint: string): Promise<T> => {
 }
 
 export const cartsServices = {
-    getAllCartsOfUserById: async (userId: number): Promise<IBaseResponseModel & {carts: ICarts[]}> => {
+    getAllCartsOfUserById: async (userId: string): Promise<IBaseResponseModel & {carts: ICarts[]}> => {
         return await fetch(baseUrl + '/carts/user/' + userId).then((res) => res.json())}
 }
