@@ -4,10 +4,6 @@ type cartsProps = {
     item: ICarts;
 }
 
-export const CartComponent = ({item}: cartsProps) => {
-    return (
-        <>
-            {item.id}
-        </>
-    );
+export const CartComponent = ({ item }: cartsProps) => {
+    return <>{item.id}</>;
 };

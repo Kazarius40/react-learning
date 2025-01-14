@@ -8,21 +8,20 @@ type idProps = {
     id: string;
 }
 
-export const CartsComponent = ({id}: idProps) => {
+export const CartsComponent = ({ id }: idProps) => {
     const [carts, setCarts] = useState<ICarts[]>([]);
 
-
     useEffect(() => {
-        if (id) {
-            cartsServices.getAllCartsOfUserById(id).then(({carts}: IBaseResponseModel & {carts: ICarts[]}) => setCarts(carts))
-        }
-    }, [id])
+        cartsServices.getAllCartsOfUserById(id).then(({ carts }: IBaseResponseModel & { carts: ICarts[] }) =>
+            setCarts(carts)
+        );
+    }, [id]);
 
     return (
         <>
-            {
-                carts.map(cart => <CartComponent key={cart.id} item={cart}/>)
-            }
+            {carts.map((cart) => (
+                <CartComponent key={cart.id} item={cart} />
+            ))}
         </>
     );
 };

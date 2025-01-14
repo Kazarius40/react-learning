@@ -1,13 +1,21 @@
 import {CartsComponent} from "../components/carts-component/CartsComponent.tsx";
-import {Outlet, useParams} from "react-router-dom";
+import {Outlet, useLocation, useNavigate} from "react-router-dom";
 
 export const CartsPage = () => {
-    const {id} = useParams();
+    const navigation = useNavigate();
+    const location = useLocation();
+    const { id } = location.state || {};
+
+    if (!id) {
+        // Якщо id відсутній, можна зробити редирект
+        navigation('/users');
+        return null;
+    }
+
     return (
         <>
-            <Outlet/>
-            {id && <CartsComponent id={id}/>}
-
+            <Outlet />
+            <CartsComponent id={id} />
         </>
     );
 };
