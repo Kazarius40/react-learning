@@ -4,7 +4,7 @@ export const UsersPage = () => {
     return (
         <>
             <Outlet/>
-            <aASKFJADSF`zkzjfk
+            <UsersComponent/>
         </>
     );
 };
