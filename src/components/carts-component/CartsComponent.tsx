@@ -12,7 +12,7 @@ export const CartsComponent = ({ id }: idProps) => {
     const [carts, setCarts] = useState<ICarts[]>([]);
 
     useEffect(() => {
-        getAll<IBaseResponseModel & {carts: ICarts[]}>(`users/${id}/carts`).then(({ carts }) =>
+        getAll<IBaseResponseModel & {carts: ICarts[]}>(`/users/${id}/carts`).then(({ carts }) =>
             setCarts(carts)
         );
     }, [id]);
