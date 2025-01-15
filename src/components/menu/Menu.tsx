@@ -5,6 +5,7 @@ export const Menu = () => {
         <>
             <ul>
                 <li><Link to={'users'}>UsersPage</Link></li>
+                <li><Link to={''}>Home</Link></li>
             </ul>
         </>
     );
