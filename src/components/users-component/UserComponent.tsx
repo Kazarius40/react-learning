@@ -1,9 +1,17 @@
-type IProps {
-    user:
+import {IUser} from "../../models/users/IUser.ts";
+import {FC} from "react";
+import {Link} from "react-router-dom";
+
+type UserTypeProps = {
+    user: IUser;
 }
 
-export const UserComponent = () => {
+export const UserComponent: FC<UserTypeProps> = ({user}) => {
     return (
-        <></>
+        <div>
+            <Link to={'details'}>
+                {user.firstName}
+            </Link>
+        </div>
     );
 };
