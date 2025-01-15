@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import {cartsServices} from "../../services/api.service.ts";
 import {ICarts} from "../../models/carts-models/ICarts.ts";
 import {CartComponent} from "./CartComponent.tsx";
-import {IBaseResponseModel} from "../../models/IBaseResponseModel.ts";
 
 type idProps = {
     id: string;
