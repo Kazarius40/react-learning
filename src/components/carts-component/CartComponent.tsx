@@ -5,5 +5,5 @@ type cartsProps = {
 }
 
 export const CartComponent = ({ item }: cartsProps) => {
-    return <>{item.userId}: {item.totalProducts}</>;
+    return <>{item.userId}: {item.totalQuantity}</>;
 };
