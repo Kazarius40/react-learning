@@ -10,7 +10,7 @@ export const UserComponent: FC<UserTypeProps> = ({user}) => {
     return (
         <div>
             <Link to={'details'}>
-                {user.firstName}
+                {user.id}: {user.firstName} {user.lastName}
             </Link>
         </div>
     );
