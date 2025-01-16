@@ -8,7 +8,7 @@ type UserDetailsProps = {
 export const UserDetailsComponent: FC<UserDetailsProps> = ({user}) => {
     return (
         <>
-            {user.firstName} {user.lastName}
+            {user.firstName} {user.lastName} - {user.age}
         </>
     );
 };

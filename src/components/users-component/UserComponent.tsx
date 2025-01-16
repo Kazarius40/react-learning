@@ -7,9 +7,11 @@ type UserTypeProps = {
 }
 
 export const UserComponent: FC<UserTypeProps> = ({user}) => {
+
+
     return (
         <div>
-            <Link to={'details'}>
+            <Link to={'details'} state={user}>
                 {user.id}: {user.firstName} {user.lastName}
             </Link>
         </div>
