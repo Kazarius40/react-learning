@@ -7,10 +7,15 @@ export const PaginationComponent = () => {
     return (
         <>
             <button onClick={() => {
-                setSearchParams({page: (--currentPage).toString()});
-            }}>prev
+                if (currentPage > 1) setSearchParams({page: (--currentPage).toString()})
+            }}>
+                prev
             </button>
-            <button>next</button>
+            <button onClick={() => {
+                setSearchParams({page: (++currentPage).toString()});
+            }}>
+                next
+            </button>
         </>
     );
 };
