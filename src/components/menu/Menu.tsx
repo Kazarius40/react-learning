@@ -1,15 +1,10 @@
 import {Link} from "react-router-dom";
 
-const Menu = () => {
+export const Menu = () => {
     return (
         <div>
-            <ul>
-                <li><Link to={'/'}>home page</Link></li>
-                <li><Link to={'/a'}>A page</Link></li>
-                <li><Link to={'/b'}>B page</Link></li>
-            </ul>
+            <Link to={''}>Home Page</Link>
+            <Link to={'users'}>Users Page</Link>
         </div>
     );
 };
-
-export default Menu;
