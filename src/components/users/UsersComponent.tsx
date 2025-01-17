@@ -1,5 +1,6 @@
 export const UsersComponent = () => {
     return (
-        <></>
+        <>
+        </>
     );
 };
