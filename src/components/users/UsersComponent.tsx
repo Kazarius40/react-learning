@@ -14,7 +14,7 @@ export const UsersComponent = () => {
 
     useEffect(() => {
         getAll<IBaseResponse & {users: IUser[]}>('/users/?skip=' + skip).then(({users}) => setUsers(users))
-    }, [searchParams]);
+    }, [skip]);
 
     return (
         <>
