@@ -4,8 +4,8 @@ import {PaginationComponent} from "../components/pagination-component/Pagination
 export const PaginationLayout = () => {
     return (
         <>
-            <Outlet/>
             <PaginationComponent/>
+            <Outlet/>
         </>
     );
 };
