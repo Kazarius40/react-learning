@@ -7,13 +7,12 @@ import {useSearchParams} from "react-router-dom";
 
 export const UsersComponent = () => {
 
-    const [searchParams] = useSearchParams();
-    const page = Number(searchParams.get("page")) || 1;
-    const skip = (page -1)*30
+    const page = Number(useSearchParams()[0].get('page')) || 1;
+    const skip = (page - 1) * 30
     const [users, setUsers] = useState<IUser[]>([]);
 
     useEffect(() => {
-        getAll<IBaseResponse & {users: IUser[]}>('/users/?skip=' + skip).then(({users}) => setUsers(users))
+        getAll<IBaseResponse & { users: IUser[] }>('/users/?skip=' + skip).then(({users}) => setUsers(users))
     }, [skip]);
 
     return (
