@@ -5,10 +5,10 @@ type CarsProps = {
     item: ICar,
 }
 
-export const CarComponent : FC<CarsProps> = ({item}) => {
+export const CarComponent: FC<CarsProps> = ({item}) => {
     return (
-        <>
+        <div>
             {item?.id}: {item.brand} {item.price} {item.year}
-        </>
+        </div>
     );
 };
