@@ -8,15 +8,12 @@ export const CarsComponent = () => {
     const [cars, setCars] = useState<ICar[]>([]);
 
     useEffect(() => {
-        getAll().then((cars) => {
-            console.log(cars);
-            setCars(cars)
-        });
+        getAll().then(cars => setCars(cars));
     }, [])
     return (
         <>
             {
-                cars.map((car) => <CarComponent key={car.id} item={car}/>)
+                cars.map((car, index: number) => <CarComponent key={car.id} item={car} index={index + 1}/>)
             }
         </>
     );

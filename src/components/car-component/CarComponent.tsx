@@ -3,12 +3,13 @@ import {FC} from "react";
 
 type CarsProps = {
     item: ICar,
+    index: number,
 }
 
-export const CarComponent: FC<CarsProps> = ({item}) => {
+export const CarComponent: FC<CarsProps> = ({item, index}) => {
     return (
         <div>
-            {item?.id}: {item.brand} {item.price} {item.year}
+            {index}. {item?.id}: {item.brand} {item.price} {item.year}
         </div>
     );
 };

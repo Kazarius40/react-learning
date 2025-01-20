@@ -10,3 +10,7 @@ export const getAll = async (): Promise<ICar[]> => {
    const {data} = await axiosInstance.get<ICar[]>('/cars')
     return data;
 }
+
+export const createCar = async (car: ICar) => {
+    await axiosInstance.post<ICar>('/cars', car);
+}
