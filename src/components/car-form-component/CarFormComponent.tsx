@@ -10,8 +10,8 @@ export const CarFormComponent = () => {
         resolver: joiResolver(carValidator)
     });
 
-    const createHandler = (data: ICar) => {
-        createCar(data);
+    const createHandler = async (data: ICar) => {
+       await createCar(data);
     }
 
 
@@ -19,14 +19,18 @@ export const CarFormComponent = () => {
         <>
             <form onSubmit={handleSubmit(createHandler)}>
                 <div>
-                    <input type="text" {...register('brand')}/>
+                    <input type="text" placeholder={'brand'} {...register('brand')}/>
+                    <div>{errors.brand?.message}</div>
                 </div>
                 <div>
-                    <input type="number" {...register('price')}/>
+                    <input type="number" placeholder={'price'} {...register('price')}/>
+                    <div>{errors.price?.message}</div>
                 </div>
                 <div>
-                    <input type="number" {...register('year')}/>
+                    <input type="number" placeholder={'year'} {...register('year')}/>
+                    <div>{errors.year?.message}</div>
                 </div>
+                <button>Submit</button>
             </form>
         </>
     );
