@@ -10,8 +10,8 @@ export const CarFormComponent = () => {
         resolver: joiResolver(carValidator)
     });
 
-    const createHandler = async (data: ICar) => {
-       await createCar(data);
+    const createHandler = async (data: ICar): Promise<void> => {
+        await createCar(data);
     }
 
 
