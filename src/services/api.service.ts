@@ -1,6 +1,7 @@
 import axios from "axios";
 import {IUserWithTokens} from "../models/user-with-tokens/IUserWithTokens.ts";
 import {IProduct} from "../models/product/IProduct.ts";
+import {IProductsResponseModelType} from "../models/IProductsResponseModelType.ts";
 
 const axiosInstance = axios.create({
     baseURL: 'https://dummyjson.com/auth',
@@ -28,5 +29,7 @@ export const login = async ({username, password, expiresInMins}: LoginData): Pro
 
 export const loadAuthProducts = async (): Promise<IProduct[]> => {
 
-    await axiosInstance.get<any[]>('/auth/products')
+    const {data: {products}} = await axiosInstance.get<IProductsResponseModelType>('/products');
+    return products
+
 }

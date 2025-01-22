@@ -1,6 +1,6 @@
 import {IProduct} from "./product/IProduct.ts";
 
-export interface IProductsResponseModel {
+export interface IProductsResponseModelType {
     total: number,
     skip: number,
     limit: number,
