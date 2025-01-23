@@ -1,10 +1,11 @@
 import {useEffect} from "react";
+import {loadAuthProducts} from "../services/api.service.ts";
 
 export const AuthResourcesPage = () => {
 
 
     useEffect(() => {
-        loadAuthProducts()
+        loadAuthProducts().then(products => {console.log(products)});
 
     }, [])
     return (
