@@ -1,13 +1,12 @@
 import {useEffect} from "react";
-import {login} from "../services/api.service.ts";
+import {login} from "../services/api.service.login.ts";
 
 export const LoginPage = () => {
-
     useEffect(() => {
-        login({
+        void login({
             username: 'emilys',
             password: 'emilyspass',
-            expiresInMins: 1,
+            expiresInMin: 1,
         });
     }, [])
 
