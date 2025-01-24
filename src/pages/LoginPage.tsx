@@ -3,11 +3,12 @@ import {login} from "../services/api.service.login.ts";
 
 export const LoginPage = () => {
     useEffect(() => {
-        void login({
+        const loginData = {
             username: 'emilys',
             password: 'emilyspass',
             expiresInMin: 1,
-        });
+        }
+        void login(loginData);
     }, [])
 
     return (
