@@ -12,6 +12,7 @@ export const UsersComponent = () => {
 
 
     const users = useFetch();
+
     return (
         <div>
             users component
