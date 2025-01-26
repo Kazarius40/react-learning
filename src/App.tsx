@@ -12,10 +12,8 @@ function App() {
         <>
             <MyContext.Provider value={{
                 counterValue: counter,
-                increment:(obj)=>{
-                    setCounter(++obj);
-                    console.log(obj);
-                }
+                // increment: (obj) => setCounter(++obj)
+                increment: () => setCounter(counter + 1)
             }}>
 
                 <LeftBranch/>

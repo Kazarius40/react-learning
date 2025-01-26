@@ -7,7 +7,6 @@ export const LeftBranchA = () => {
         useContext(MyContext);
     return (
         <div>Left Branch - A
-
             <p>
                current counter value is = {counterValue}
             </p>
