@@ -5,12 +5,10 @@ type UserProps = {
     user: IUser;
 }
 
-export const UserComponent:FC<UserProps> = ({user})=>{
+export const UserComponent: FC<UserProps> = ({user}) => {
     return (
-        <>
-            <div>
-                {user.id}: {user.email}
-            </div>
-        </>
+        <div>
+            {user.id}: {user.email}
+        </div>
     )
 }
