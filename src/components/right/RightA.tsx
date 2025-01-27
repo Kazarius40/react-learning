@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {MyContext} from "../context/MyContext.tsx";
+import {MyContext} from "../../context/MyContext.tsx";
 
 export const RightA = () => {
     const {changeTheme} = useContext(MyContext);
