@@ -4,7 +4,7 @@ import "./left.css"
 
 export const LeftA = () => {
     const {theme} = useContext(MyContext);
-
+    console.log(theme)
 
     return (
         <div className={theme}>
