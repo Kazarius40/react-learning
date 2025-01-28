@@ -5,11 +5,9 @@ type MyContextType = {
     changeTheme: (theme: string) => void;
 }
 
-export const defaultValue = {
-    theme: 'light',
-    changeTheme: (theme: string) => {
-        console.log(theme);
-    }
+const defaultValue = {
+    theme: '',
+    changeTheme: () => {}
 };
 
 export const MyContext = createContext<MyContextType>(defaultValue)
