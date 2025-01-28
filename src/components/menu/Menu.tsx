@@ -4,8 +4,8 @@ export const Menu = () => {
     return (
         <ul>
             <li><Link to={'users'}>Users</Link></li>
-            <li></li>
-            <li></li>
+            <li><Link to={'users/1'}>user 1</Link></li>
+            <li><Link to={'posts'}>posts</Link></li>
         </ul>
     );
 };
