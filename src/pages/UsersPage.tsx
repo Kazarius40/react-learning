@@ -1,9 +1,14 @@
-import {UsersComponent} from "../components/userscomponent/UsersComponent.tsx";
+import {useUsers} from "../redux/hooks/useUsers.ts";
+import {UserList} from "../components/userscomponent/UserList.tsx";
 
 export const UsersPage = () => {
+
+    const {users, loadState} = useUsers();
+
     return (
-        <>
-            <UsersComponent/>
-        </>
+        <div>
+            {!loadState && <div>Loading</div>}
+            <UserList users={users}/>
+        </div>
     );
 };
