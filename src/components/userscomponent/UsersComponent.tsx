@@ -5,16 +5,17 @@ import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
 
 export const UsersComponent = () => {
 
-    const {users} = useAppSelector(({userSlice}) => userSlice);
+    const {users, loadState} = useAppSelector(({userSlice}) => userSlice);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-       dispatch(userSliceActions.loadUsers());
+        dispatch(userSliceActions.loadUsers());
     }, []);
 
 
     return (
         <div>
+            {!loadState && <div>Loading</div>}
             {
                 users.map((user) => {
                     return <div key={user.id}>
