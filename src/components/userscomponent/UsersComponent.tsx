@@ -1,19 +1,15 @@
-import {useAppSelector, userSliceActions} from "../../main.tsx";
-import {useDispatch} from "react-redux";
 import {useEffect} from "react";
+import {useAppSelector} from "../../redux/hooks/useAppSelector.tsx";
+import {userSliceActions} from "../../redux/slices/userSlice/userSlice.ts";
+import {useAppDispatch} from "../../redux/hooks/useAppDispatch.tsx";
 
 export const UsersComponent = () => {
 
     const {users} = useAppSelector(({userSlice}) => userSlice);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                dispatch(userSliceActions.loadUsers(value));
-            });
-
+       dispatch(userSliceActions.loadUsers());
     }, []);
 
 
