@@ -1,16 +1,13 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
+import {fetchUserById, fetchUsers} from "./userApi.ts";
 
 export const loadUsers = createAsyncThunk(
     'userSlice/loadUsers',
     async (_, thunkAPI) => {
 
         try {
-            const users = await fetch('https://jsonplaceholder.typicode.com/users')
-                .then(value => value.json());
-            // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
-
+            const users = await fetchUsers()
             return thunkAPI.fulfillWithValue(users);
-            // throw new Error();
         } catch (e) {
             console.log(e);
             return thunkAPI.rejectWithValue('Error loading users');
@@ -21,14 +18,9 @@ export const loadUsers = createAsyncThunk(
 export const loadUser = createAsyncThunk(
     'userSlice/loadUser',
     async (id: string, thunkAPI) => {
-
         try {
-            const user = await fetch('https://jsonplaceholder.typicode.com/users/' + id)
-                .then(value => value.json());
-            // thunkAPI.dispatch(userSliceActions.changeLoadState(true));
-
+            const user = await fetchUserById(id);
             return thunkAPI.fulfillWithValue(user);
-            // throw new Error();
         } catch (e) {
             console.log(e);
             return thunkAPI.rejectWithValue('Some Error');
