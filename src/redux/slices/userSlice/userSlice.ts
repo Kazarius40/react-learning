@@ -15,9 +15,9 @@ export const userSlice = createSlice({
     name: "userSlice",
     initialState: initialState,
     reducers: {
-        changeLoadState: (state, action: PayloadAction<boolean>) => {
-            state.loadState = action.payload;
-        }
+        // changeLoadState: (state, action: PayloadAction<boolean>) => {
+        //     state.loadState = action.payload;
+        // }
     },
     extraReducers: builder =>
         builder

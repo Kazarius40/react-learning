@@ -5,5 +5,4 @@ const fetchData = async (endpoint: string) => {
     return response.json();
 };
 
-export const fetchUsers = () => fetchData('/users');
-export const fetchUserById = (id: string) => fetchData('/users/' + id);
+export const fetchUser = (id?: string) => fetchData(id ? '/users/' + id : '/users');
